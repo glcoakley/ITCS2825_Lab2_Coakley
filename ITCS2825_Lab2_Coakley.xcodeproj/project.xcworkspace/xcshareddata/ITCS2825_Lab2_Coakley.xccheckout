@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5FD6A5B4-0339-415A-BD67-32D91DA234A1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ITCS2825_Lab2_Coakley</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4EBF9FBBFBE6256ADB2080B323D1822211245275</key>
+		<string>https://github.com/glcoakley/ITCS2825_Lab2_Coakley.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ITCS2825_Lab2_Coakley.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4EBF9FBBFBE6256ADB2080B323D1822211245275</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/glcoakley/ITCS2825_Lab2_Coakley.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4EBF9FBBFBE6256ADB2080B323D1822211245275</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4EBF9FBBFBE6256ADB2080B323D1822211245275</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ITCS2825_Lab2_Coakley</string>
+		</dict>
+	</array>
+</dict>
+</plist>
