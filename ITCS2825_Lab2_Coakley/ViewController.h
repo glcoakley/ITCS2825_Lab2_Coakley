@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIAlertViewDelegate, UIActionSheetDelegate>
+
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *computerImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *youImageView;

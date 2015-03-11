@@ -9,20 +9,36 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+- (IBAction)HandleMenu:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *lblComputer;
+@property (weak, nonatomic) IBOutlet UILabel *lblUser;
+- (IBAction)activateDialogBox:(UIButton *)sender;
 @end
 
 static const int ROCK = 0;
 static const int PAPER = 1;
 static const int SCISSORS = 2;
 
+static  int     lzrdSpokUserComputerResults[5][5] =
+/*                                                  Computer's Picks                 */
+{   /*                                  Rock    Paper   Scissors    Lizard      Spock    */
+    /* The        */  /* Rock    */   {   00,     -1,     +1,         +1,         -1 },
+    /* Human's    */  /* Paper   */   {   +1,     00,     -1,         -1,         +1 },
+    /* Picks      */  /* Scissors*/   {   -1,     +1,     00,         +1,         -1 },
+    /* on this    */  /* Lizard  */   {   -1,     +1,     -1,         00,         +1 },
+    /*  axis      */  /* Spock   */   {   +1,     -1,     +1,         -1,         00 }
+};
+
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.computerImageView.hidden = TRUE;
-    self.youImageView.hidden = TRUE;
-}
+    [self changeVisibility:false];
+    [self resetGame];
+    [self changeVisibility:true];
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -101,66 +117,105 @@ static const int SCISSORS = 2;
 
 -(void)winner
 {
-    switch (self.you)
+    int     gameResult = lzrdSpokUserComputerResults[self.you][self.computer];
+    self.winnerLabel.hidden = false;
+    switch ( gameResult )
     {
-        case ROCK:
+        case   -1:     // computer wins
         {
-            if(self.computer == ROCK)
-            {
-                self.winnerLabel.text = @"It's a TIE!";
-            }
-            if(self.computer == PAPER)
-            {
-                self.winnerLabel.text = [NSString stringWithFormat:
-                                         @"You Lose! %i to %i", self.youScore, ++self.computerScore];
-            }
-            if(self.computer == SCISSORS)
-            {
-                self.winnerLabel.text = [NSString stringWithFormat:
-                                         @"You Win! %i to %i", ++self.youScore, self.computerScore];
-            }
-        }
-            break;
+            self.winnerLabel.text = [NSString stringWithFormat:
+                                     @"You Lose! %i to %i", self.youScore, ++self.computerScore];
             
-        case PAPER:
+        }
+        break;
+            
+        case   0:     // it's a tie
         {
-            if(self.computer == PAPER)
-            {
-                self.winnerLabel.text = @"It's a TIE!";
-            }
-            if(self.computer == SCISSORS)
-            {
-                self.winnerLabel.text = [NSString stringWithFormat:
-                                         @"You Lose! %i to %i", self.youScore, ++self.computerScore];
-            }
-            if(self.computer == ROCK)
-            {
-                self.winnerLabel.text = [NSString stringWithFormat:
-                                         @"You Win! %i to %i", ++self.youScore, self.computerScore];
-            }
+            self.winnerLabel.text = @"It's a TIE!";
         }
-            break;
+        break;
             
-        case SCISSORS:
+        case   +1:     // the user wins
         {
-            if(self.computer == SCISSORS)
-            {
-                self.winnerLabel.text = @"It's a TIE!";
-            }
-            if(self.computer == ROCK)
-            {
-                self.winnerLabel.text = [NSString stringWithFormat:
-                                         @"You Lose! %i to %i", self.youScore, ++self.computerScore];
-            }
-            if(self.computer == PAPER)
-            {
-                self.winnerLabel.text = [NSString stringWithFormat:
-                                         @"You Win! %i to %i", ++self.youScore, self.computerScore];
-            }
+            self.winnerLabel.text = [NSString stringWithFormat:
+                                     @"You Win! %i to %i", ++self.youScore, self.computerScore];
         }
-            break;
-            
+        break;
     }
 }
+
+-(void)resetGame{
+    [self changeVisibility:false];
+    self.youImageView.image = [UIImage imageNamed:@"rock.jpg"];
+    self.computerImageView.image = [UIImage imageNamed:@"rock.jpg"];
+    self.youScore = 0;
+    self.computerScore = 0;
+    self.winnerLabel.hidden = true;
+}
+
+
+-(void)changeVisibility:(bool)aVisibleBool
+{
+    self.youImageView.hidden = !aVisibleBool;
+    self.computerImageView.hidden = !aVisibleBool;
+    self.lblUser.hidden = !aVisibleBool;
+    self.lblComputer.hidden = !aVisibleBool;
+}
+
+- (IBAction)HandleMenu:(UIButton *)sender {
+}
+- (IBAction)activateDialogBox:(UIButton *)sender {
+    UIAlertView *alertDialog;
+    alertDialog = [[UIAlertView alloc]
+                   initWithTitle: @"Choices"
+                   message:@"Please choose an action"
+                   delegate: self
+                   cancelButtonTitle: @"Cancel"
+                   otherButtonTitles: @"User", @"Reset", @"Quit", nil];
+    [alertDialog show];
+}
+
+// Receives the index of the button that was selected in the alert view
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    // get the title of the selected button
+    NSString *buttonTitle=[alertView buttonTitleAtIndex:buttonIndex];
+    
+    if ([buttonTitle isEqualToString:@"Reset"])
+    {
+        [self changeVisibility:false];
+        [self resetGame];
+        [self changeVisibility:true];
+    }
+    else if ([buttonTitle isEqualToString:@"Quit"])
+    {
+        exit(0);
+    }
+    else if ([buttonTitle isEqualToString:@"User"])
+    {
+        UIAlertView *alertDialog;
+        alertDialog = [[UIAlertView alloc]
+                       initWithTitle: @"User Name"
+                       message:@"Please enter your user name"
+                       delegate: self
+                       cancelButtonTitle: @"Ok"
+                       otherButtonTitles: nil];
+        alertDialog.alertViewStyle=UIAlertViewStylePlainTextInput;
+        [alertDialog show];
+    }
+    else if ([alertView.title
+         isEqualToString: @"User Name"])
+    {
+        NSString * txt = [[alertView textFieldAtIndex:0] text];
+        if ( ([txt length]!= 0) && !isspace( [txt characterAtIndex:0]) )
+        {
+            // assign the text to the user name
+            self.lblUser.text=[[alertView textFieldAtIndex:0] text];
+        }
+    }
+
+}
+
 
 @end
