@@ -57,12 +57,6 @@
                                     <action selector="onClickScissors:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EoF-bM-Lf6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Computer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcC-85-SrQ">
-                                <rect key="frame" x="191" y="169" width="77" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajv-Jc-ctk">
                                 <rect key="frame" x="16" y="361" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -81,6 +75,12 @@
                                     <action selector="activateDialogBox:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RHt-6G-40w"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Computer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcC-85-SrQ">
+                                <rect key="frame" x="191" y="186" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8689891865617535" blue="0.95143488651862163" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -95,11 +95,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="272"/>
+            <point key="canvasLocation" x="-48" y="266"/>
         </scene>
     </scenes>
     <resources>
-        <image name="paper.jpg" width="214" height="236"/>
-        <image name="rock.jpg" width="214" height="236"/>
+        <image name="paper.jpg" width="105" height="112"/>
+        <image name="rock.jpg" width="95" height="119"/>
     </resources>
 </document>
