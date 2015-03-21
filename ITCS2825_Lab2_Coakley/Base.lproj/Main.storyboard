@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paper.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="QeH-Qd-kES">
-                                <rect key="frame" x="154" y="28" width="150" height="150"/>
+                                <rect key="frame" x="210" y="64" width="86" height="93"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rock.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zBe-mP-xF2">
-                                <rect key="frame" x="16" y="214" width="150" height="150"/>
+                                <rect key="frame" x="30" y="272" width="86" height="93"/>
                                 <color key="backgroundColor" red="0.92627565488833286" green="0.84359750343327033" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 to 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnB-YN-N7j">
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dau-gF-Nud">
-                                <rect key="frame" x="140" y="430" width="41" height="30"/>
+                                <rect key="frame" x="66" y="430" width="41" height="30"/>
                                 <state key="normal" title="Paper">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waH-WF-3be">
-                                <rect key="frame" x="245" y="430" width="59" height="30"/>
+                                <rect key="frame" x="122" y="430" width="59" height="30"/>
                                 <state key="normal" title="Scissors">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajv-Jc-ctk">
-                                <rect key="frame" x="16" y="361" width="150" height="21"/>
+                                <rect key="frame" x="7" y="367" width="133" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,8 +75,43 @@
                                     <action selector="activateDialogBox:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RHt-6G-40w"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwe-oA-NEH">
+                                <rect key="frame" x="112" y="37" width="128" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Lizard - Spock">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled" title="Lizard - Spock"/>
+                                <connections>
+                                    <action selector="actLZSpock:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p6C-PS-agx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rock - Paper - Scissors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yj5-xf-nOU">
+                                <rect key="frame" x="85" y="15" width="183" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F83-cx-tni">
+                                <rect key="frame" x="199" y="430" width="46" height="30"/>
+                                <state key="normal" title="Lizard">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickLizard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0IH-5j-uuc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cH-sM-Udl">
+                                <rect key="frame" x="258" y="430" width="46" height="30"/>
+                                <state key="normal" title="Spock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickSpock:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ScJ-9b-Fte"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Computer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcC-85-SrQ">
-                                <rect key="frame" x="191" y="186" width="77" height="21"/>
+                                <rect key="frame" x="215" y="157" width="77" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -86,6 +121,12 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="btnLZSpock" destination="lwe-oA-NEH" id="1Z2-p0-spr"/>
+                        <outlet property="btnLizard" destination="F83-cx-tni" id="5j8-Lh-Scb"/>
+                        <outlet property="btnPaper" destination="Dau-gF-Nud" id="B5X-tX-Wgq"/>
+                        <outlet property="btnRock" destination="UX5-2H-H1M" id="EsF-F9-jfA"/>
+                        <outlet property="btnScissors" destination="waH-WF-3be" id="f35-hq-a9O"/>
+                        <outlet property="btnSpock" destination="2cH-sM-Udl" id="Lhy-N5-EcU"/>
                         <outlet property="computerImageView" destination="QeH-Qd-kES" id="fEd-49-9Bs"/>
                         <outlet property="lblComputer" destination="EcC-85-SrQ" id="JjJ-yZ-tL7"/>
                         <outlet property="lblUser" destination="ajv-Jc-ctk" id="YjO-yu-G6Z"/>
@@ -95,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-48" y="266"/>
+            <point key="canvasLocation" x="75" y="175"/>
         </scene>
     </scenes>
     <resources>

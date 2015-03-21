@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C92BE4071ABE074F006BE525 /* lizard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C92BE4061ABE074F006BE525 /* lizard.jpg */; };
+		C92BE4091ABE0764006BE525 /* spock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C92BE4081ABE0764006BE525 /* spock.jpg */; };
 		C957BFD01A77150300A0A433 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C957BFCF1A77150300A0A433 /* main.m */; };
 		C957BFD31A77150300A0A433 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C957BFD21A77150300A0A433 /* AppDelegate.m */; };
 		C957BFD61A77150300A0A433 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C957BFD51A77150300A0A433 /* ViewController.m */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C92BE4061ABE074F006BE525 /* lizard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lizard.jpg; sourceTree = "<group>"; };
+		C92BE4081ABE0764006BE525 /* spock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spock.jpg; sourceTree = "<group>"; };
 		C957BFCA1A77150300A0A433 /* ITCS2825_Lab2_Coakley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITCS2825_Lab2_Coakley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C957BFCE1A77150300A0A433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C957BFCF1A77150300A0A433 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 		C957BFF31A77169500A0A433 /* RPS Images */ = {
 			isa = PBXGroup;
 			children = (
+				C92BE4081ABE0764006BE525 /* spock.jpg */,
+				C92BE4061ABE074F006BE525 /* lizard.jpg */,
 				C957BFF41A77169500A0A433 /* paper.jpg */,
 				C957BFF51A77169500A0A433 /* rock.jpg */,
 				C957BFF61A77169500A0A433 /* scissors.jpg */,
@@ -216,8 +222,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92BE4091ABE0764006BE525 /* spock.jpg in Resources */,
 				C957BFF71A77169500A0A433 /* paper.jpg in Resources */,
 				C957BFF81A77169500A0A433 /* rock.jpg in Resources */,
+				C92BE4071ABE074F006BE525 /* lizard.jpg in Resources */,
 				C957BFD91A77150300A0A433 /* Main.storyboard in Resources */,
 				C957BFDE1A77150300A0A433 /* LaunchScreen.xib in Resources */,
 				C957BFF91A77169500A0A433 /* scissors.jpg in Resources */,
@@ -434,6 +442,7 @@
 				C957BFEF1A77150300A0A433 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C957BFF01A77150300A0A433 /* Build configuration list for PBXNativeTarget "ITCS2825_Lab2_CoakleyTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +451,7 @@
 				C957BFF21A77150300A0A433 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
